@@ -37,7 +37,7 @@ databaseChangeLog(logicalFilePath: 'script/db/rdupm_nexus_server_config.groovy')
             preConditions(onFail: 'MARK_RAN'){
                 sqlCheck(expectedResult: 0,sql:"select count(*) from rdupm_nexus_server_config where default_flag = 1")
             }
-            sql("INSERT INTO `hrds_prod_repo`.`rdupm_nexus_server_config`(`config_id`, `server_name`, `server_url`, `user_name`, `password`, `anonymous`, `anonymous_role`, `default_flag`, `enable_anonymous_flag`, `tenant_id`, `object_version_number`, `creation_date`, `created_by`, `last_updated_by`, `last_update_date`) VALUES (1, 'aaatestbbb', 'http://aaatestbbb', 'admin', 'aaatestbbb', 'aaatestbbb', 'aaatestbbb', 1, 1, 0, 12, '2020-06-23 00:00:00', -1, -1, '2020-06-23 10:00:00')")
+            sql("INSERT INTO `hrds_prod_repo`.`rdupm_nexus_server_config`(`config_id`, `server_name`, `server_url`, `user_name`, `password`, `anonymous`, `anonymous_role`, `default_flag`, `enable_anonymous_flag`, `tenant_id`, `object_version_number`, `creation_date`, `created_by`, `last_updated_by`, `last_update_date`) VALUES (1, 'test', 'http://test', 'admin', 'test', 'test', 'test', 1, 1, 0, 12, '2020-06-23 00:00:00', -1, -1, '2020-06-23 10:00:00')")
         }
     }
 }
